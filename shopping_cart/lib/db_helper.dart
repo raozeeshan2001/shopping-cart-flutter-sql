@@ -20,6 +20,7 @@ class DbHelper {
         'cart.db'); //creates valid file path for database
     var db = await openDatabase(path,
         version: 1, onCreate: _onCreate); //opens database at given path
+    return db;
   }
 
   _onCreate(Database db, int version) async {
